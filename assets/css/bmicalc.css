@@ -1,0 +1,210 @@
+.gradientControlContainer
+{
+    float: left; /*width:100%;*/
+    border: solid 0px #000000; /*background-color:#ff0000;*/
+    margin-top: 10px; /*margin-bottom:50px;*/
+}
+.gradcol, .gradcol1, .gradcol2, .gradcol3, .gradcol4, .gradcol5, .gradcol6
+{
+    float: left;
+    height: 40px;
+    width: 10%;
+    border: solid 0px #cccccc;
+}
+
+.bmiPrefix
+{
+    float: left;
+    background-image: url(Images/bmi-left.png);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 42px;
+}
+
+.bmiSuffix
+{
+    float: left;
+    float: left;
+    background-image: url(Images/bmi-right.png);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 42px;
+}
+
+.gradcol2, .newgradcolpanel1
+{
+    background: #ff0000;
+    background: -moz-linear-gradient(left, #ff0000 0%, #f6ff68 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0000), color-stop(100%,#f6ff68));
+    background: -webkit-linear-gradient(left, #ff0000 0%,#f6ff68 100%);
+    background: -o-linear-gradient(left, #ff0000 0%,#f6ff68 100%);
+    background: -ms-linear-gradient(left, #ff0000 0%,#f6ff68 100%);
+    background: linear-gradient(left, #ff0000 0%,#f6ff68 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#f6ff68',GradientType=1 );
+    width: 30%;
+
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.gradcol3, .newgradcolpanel2
+{
+    background: #f6ff68;
+    background: -moz-linear-gradient(left, #f6ff68 0%, #20e016 50%, #f6ff68 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f6ff68), color-stop(50%,#20e016), color-stop(100%,#f6ff68));
+    background: -webkit-linear-gradient(left, #f6ff68 0%,#20e016 50%,#f6ff68 100%);
+    background: -o-linear-gradient(left, #f6ff68 0%,#20e016 50%,#f6ff68 100%);
+    background: -ms-linear-gradient(left, #f6ff68 0%,#20e016 50%,#f6ff68 100%);
+    background: linear-gradient(left, #f6ff68 0%,#20e016 50%,#f6ff68 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6ff68', endColorstr='#f6ff68',GradientType=1 );
+    width: 25%;
+    
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.newgradcolpanel2 .Inner1
+{
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    float: left;
+    height: 40px;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6ff68', endColorstr='#20e016',GradientType=1 );
+}
+
+.newgradcolpanel2 .Inner2
+{
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    float: left;
+    height: 40px;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20e016', endColorstr='#f6ff68',GradientType=1 );
+}
+
+.gradcol4, .newgradcolpanel3
+{
+    background: #f6ff68;
+    background: -moz-linear-gradient(left, #f6ff68 0%, #ff0000 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f6ff68), color-stop(100%,#ff0000));
+    background: -webkit-linear-gradient(left, #f6ff68 0%,#ff0000 100%);
+    background: -o-linear-gradient(left, #f6ff68 0%,#ff0000 100%);
+    background: -ms-linear-gradient(left, #f6ff68 0%,#ff0000 100%);
+    background: linear-gradient(left, #f6ff68 0%,#ff0000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6ff68', endColorstr='#ff0000',GradientType=1 );
+    width: 30%;
+    
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.gradcol5, .newgradcolpanel4
+{
+    background-color: #FF0000; /* Old browsers */
+    width: 30%;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.gradcol1, .gradcol6
+{
+    background-color: #ff0000;
+    width: 5%;
+}
+
+.gradpointer
+{
+    position: relative;
+    background-image: url(images/bmi-calc-pointer.png);
+    left: 350px;
+    top: -7px;
+    *top: -80px;
+    height: 20px;
+    width: 20px;
+    border: solid 0px #333;
+}
+
+.panelLabel
+{
+    float: left;
+    text-align: center;
+}
+
+.panelKey
+{
+    float: left;
+}
+
+.bmiHeightRow td,
+.bmiHeightRow th
+{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+tr.bmiMeasurementSelectorRow,
+.bmiMeasurementSelectorRow th,
+.bmiMeasurementSelectorRow td
+{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#BmiMasterTable
+{
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+}
+
+.bmitextalert
+{
+    float: left;
+    margin-top: 20px;
+    width: 100% !important;
+    *height: 20px;
+}
+
+.bmitextinfo
+{
+    float: left; 
+    font-size: 12pt;
+    margin-top: 30px;
+    padding-right: 1em;
+}
+
+.bmiAgeRow th,
+.bmiAgeRow td
+{
+    padding-bottom: 10px;
+}
+
+#newgradcolpanellabel1.selectedPanel
+{
+    color: red;
+    text-decoration: underline;
+}
+
+#newgradcolpanellabel2.selectedPanel
+{
+    color: green;
+    text-decoration: underline;
+}
+
+#newgradcolpanellabel3.selectedPanel
+{
+    color: #ff9900;
+    text-decoration: underline;
+}
+
+#newgradcolpanellabel4.selectedPanel
+{
+    color: red;
+    text-decoration: underline;
+}
+
+#newgradcolpanellabel2
+{
+    padding-left: 15px;
+}

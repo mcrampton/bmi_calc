@@ -1,0 +1,1 @@
+function calcbmi(){var t=document.frmBMI,a=t.txtKG.value,c=t.txtMETRE.value,u=idx=0}
