@@ -8,93 +8,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Place favicon.ico in the root directory -->
-
 <link rel="stylesheet" href="assets/css/bmicalc.css">
 </head>
 <body>
-	<div class="BmiCalculator">
-  <div id="ctl00_ContentPlaceHolder1_BmiCalculator1_MainUpdatePanel">
-    <div id="bmiContainer" class="bmiContainer">
-      <div id="bmiContainerTopRight">
-        <div id="bmiContainerTopLeft"> </div>
-      </div>
-      <div id="bmiContainerBody">
-        <table id="BmiMasterTable">
-          <tbody>
-            <tr>
-              <td><table>
-                  <tbody>
-                    <tr id="BmiCalculator1_MeasurementSelector" class="bmiMeasurementSelectorRow">
-                      <th> Measurement </th>
-                      <td><table id="BmiCalculator1_MeasurementRadioButtonList">
-                          <tbody>
-                            <tr>
-                              <td><input id="d1" type="radio" name="d1" value="Imperial" checked="checked">
-                                <label for="d1">Imperial</label></td>
-                              <td><input id="d2" type="radio" name="d2" value="Metric" onClick="d2">
-                                <label for="d2">Metric</label></td>
-                            </tr>
-                          </tbody>
-                        </table></td>
-                    </tr>
-                    <tr id="BmiCalculator1_ImperialHeightRow" class="bmiHeightRow">
-                      <th> Height </th>
-                      <td><input name="HeightFeetTextBox" type="text" value="5" maxlength="1" size="1" id="ctl00_ContentPlaceHolder1_BmiCalculator1_HeightFeetTextBox">feet
-                        <input name="HeightInchesTextBox" type="text" value="0" maxlength="2" size="2" id="HeightInchesTextBox">inches <span id="HeightCustomValidator">Height must contain only whole numbers</span></td>
-                    </tr>
-                    <tr id="BmiCalculator1_ImperialWeightRow" class="bmiWeightRow">
-                      <th> Weight </th>
-                      <td><input name="BmiCalculator1$WeightStoneTextBox" type="text" value="8" maxlength="2" size="2" id="ctl00_ContentPlaceHolder1_BmiCalculator1_WeightStoneTextBox">stone
-                        <input name="BmiCalculator1$WeightPoundsTextBox" type="text" value="0" maxlength="2" size="2" id="ctl00_ContentPlaceHolder1_BmiCalculator1_WeightPoundsTextBox">
-                        pounds <span id="BmiCalculator1_ImperialWeightCustomValidator">Weight must contain only whole numbers</span></td>
-                    </tr>
-                    <tr id="BmiCalculator1_MetricHeightRow" class="bmiHeightRow">
-                      <th> Height </th>
-                      <td><input name="BmiCalculator1$HeightCmTextBox" type="text" value="152" maxlength="3" size="3" id="BmiCalculator1_HeightCmTextBox">
-                        cm <span id="BmiCalculator1_MetricHeightCustomValidator">Height must contain only whole numbers</span></td>
-                    </tr>
-                    <tr id="BmiCalculator1_MetricWeightRow" class="bmiWeightRow">
-                      <th> Weight </th>
-                      <td><input name="BmiCalculator1$WeightKgTextBox" type="text" value="50" maxlength="5" size="5" id="BmiCalculator1_WeightKgTextBox">
-                        kg <span id="BmiCalculator1_MetricWeightCustomValidator">Weight must contain only whole numbers</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p> <a id="BmiCalculator1_ResetLinkButton" class="linkButton calcbutton resetcalcbutton" href='#'> <span class="calcbuttoninner">Start Again</span> </a> <a id="BmiCalculator1_CalculateLinkButton" class="linkButton calcbutton" href='#'> <span class="calcbuttoninner">Calculate</span> </a> </p>
-                <div class="PostButtons"></div>
-                <p></p></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-        <div id="BmiCalculator1_ResultsSection">
-          <div id="BmiCalculator1_bmiKidsTextAlert" class="bmitextalert"></div>
-          <div id="BmiCalculator1_bmiTextAlert" class="bmitextalert">Your body mass index (BMI) is 21.64</div>
-          <div id="BmiCalculator1_bmiTextInfo" class="bmitextinfo"> The information you have provided indicates that you are in the healthy weight range for your height.  It is important to maintain a healthy weight to decrease the risk of heart disease, some cancers and Type 2 Diabetes.  To maintain a healthy weight ensure you continue to eat a healthy, balanced diet and take part in regular physical activity.  It is recommended that young people are active for at least 60 minutes per day and adults are active for a minimum of 30 minutes a day, 5 times a week. </div>
-        </div>
-        
-        <!--END BMI BODY -->
-        <div id="bmiContainerBottomRight">
-          <div id="bmiContainerBottomLeft"> </div>
-        </div>
-      </div>
-      <!-- Help Popups -->
-      <div id="CentileHelpLinkDiv">
-        <p> Your BMI percentile shows how your BMI compares to other young people who were the same age and gender as you (in 1990). <br>
-          For example if your BMI is 24 and is on the 80th percentile for your age and gender, that means your BMI is in the top 20 <br>
-          for weight and that there are 80 young people with a lower BMI. </p>
-        <p> <span>What are the centile ranges?</span><br>
-          BMI 1st to 4th percentile: Underweight<br>
-          BMI 5th to 84th percentile: Healthy Weight<br>
-          BMI 85th to 94th percentile: Overweight<br>
-          BMI 95th to 100th percentile: Obese<br>
-        </p>
-        <p> Therefore, if your BMI is in either in the top 15% or bottom 4%, you are likely to have health risks due to your weight. </p>
-      </div>
-    </div>
-  </div>
-</div>
+
+<form name=fn>
+	<table class=main>
+		<tr colspan="2">
+			<td id=$msm>Measuring System<td>
+		<!--	<select id=msm onchange=msystem();>
+					<option value=metric>Metric (Kgs, Cms)
+					<option value=us>US (lbs, inches)
+				</select> -->
+				<input type="radio" name="msm" id="msm1" value="metric" checked="checked" onclick=msystem(); />
+				<label for="msm1">KG</label>
+				<input type="radio" name="msm" id="msm2" value="us" onclick=msystem(); />
+				<label for="msm2">LBS</label>
+			</td>
+		</tr>
+		<tr>
+			<td>Height<span id=thm>(Cms)</span></td>
+			<td><input id=hm></td>
+		</tr>
+		<tr>
+			<td>Weight <span id=twm>(Kgs)</span></td>
+			<td><input id=wm></td>
+		</tr>
+		<tr>
+			<td><button type=reset>Reset</button></td>
+			<td><button type=button onclick='bmass();'>Submit</button></td>
+		</tr>
+		<tr>
+			<td>Body Mass Index (BMI)<td><input id=bmi class=op></td>
+		</tr>
+		<tr>
+			<td>Normal BMI range<td><input class=op id=nbmi value='18.5-25 kg/m2'></td>
+		</tr>
+		<tr>
+			<td colspan=2 class=ac><br>The calculations are based on WHO recommendations.</td>
+		</tr>
+	</table>
+</form>
+
 <!--        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>--> 
-<script src="assets/js/bmi.js"></script>
+<script src="assets/js/bmi-opt1.js"></script>
 </body>
 </html>
