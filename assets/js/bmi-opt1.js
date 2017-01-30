@@ -27,6 +27,7 @@ function bmass (){
 var measure= document.querySelector('input[name="msm"]:checked').value,
 	ms= measure,
 	height=$('hm').value,
+	heightunit=$('hi').value,
 	weight=$('wm').value,bmi = document.getElementById('bmi'),
 	youAre = document.getElementById('youAre');
 	
@@ -39,10 +40,14 @@ var you = '';
 if((ms==='metric'&&height>0) || (ms==='us'&&height>0)) {
     yourResult.innerHTML = 'Your BMI is:';
 }
+var heighttotal = height*100 + +heightunit,
+	heighttotalimperial = height*12 + +heightunit;
+//heighttotal = height+(heightunit/10)*10
+	
 if(ms==='metric'&&height>0){
-	$('bmi').textContent=Math.round(weight/(height*height/10000)*100)/100 ;  
+	$('bmi').textContent=Math.round(weight/(heighttotal*heighttotal/10000)*100)/100 ;  
 }else if(ms==='us'&&height>0){
-	$('bmi').textContent=Math.round(703*weight/(height*height)*100)/100;
+	$('bmi').textContent=Math.round(703*weight/(heighttotalimperial*heighttotalimperial)*100)/100;
 }
 if ($('bmi').textContent < 18.5) {
 	you = 'You are below the recommended weight for your height and should not be attempting to lose weight. A healthy BMI range is between 18.5-25. We recommend that you consult your GP.</p>';
