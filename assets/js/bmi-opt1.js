@@ -31,31 +31,26 @@ var measure= document.querySelector('input[name="msm"]:checked').value,
 	youAre = document.getElementById('youAre');
 	
 if(height===null || height.length===0 || weight===null || weight.length===0 ){
-$('bmi').value="Pl. enter data.";
+$('bmi').textContent="Pl. enter data.";
 }else{
-$('bmi').value="";
+$('bmi').textContent="";
 }
-
-      	var you = '';
+var you = '';
 
 if(ms==='metric'&&height>0){
-	$('bmi').value=Math.round(weight/(height*height/10000)*100)/100 ;
-    
-if ($('bmi').value < 18.5) {
+	$('bmi').textContent=Math.round(weight/(height*height/10000)*100)/100 ;  
+}else if(ms==='us'&&height>0){
+	$('bmi').textContent=Math.round(703*weight/(height*height)*100)/100;
+}
+if ($('bmi').textContent < 18.5) {
 	you = 'Underweight';
-} else if ($('bmi').value > 18.5 && ($('bmi').value < 24.9)) {
+} else if ($('bmi').textContent > 18.5 && ($('bmi').textContent < 24.9)) {
 	you = 'Normal';
-} else if ($('bmi').value > 24.9 && ($('bmi').value < 29.9)) {
+} else if ($('bmi').textContent > 24.9 && ($('bmi').textContent < 29.9)) {
 	you = 'Overweight';
 } else {
 	you = 'Obese';
 }
-
 youAre.innerHTML = you;
-    
-}else if(ms==='us'&&height>0){
-	$('bmi').value=Math.round(703*weight/(height*height)*100)/100;
-}
-
 
 }
