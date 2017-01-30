@@ -37,7 +37,7 @@ $('bmi').textContent="";
 }
 var you = '';
 if((ms==='metric'&&height>0) || (ms==='us'&&height>0)) {
-    yourResult.innerHTML = 'You BMI is:';
+    yourResult.innerHTML = 'Your BMI is:';
 }
 if(ms==='metric'&&height>0){
 	$('bmi').textContent=Math.round(weight/(height*height/10000)*100)/100 ;  
