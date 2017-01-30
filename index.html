@@ -16,37 +16,31 @@
 	<table class=main>
 		<tr colspan="2">
 			<td id=$msm>Measuring System<td>
-		<!--	<select id=msm onchange=msystem();>
-					<option value=metric>Metric (Kgs, Cms)
-					<option value=us>US (lbs, inches)
-				</select> -->
 				<input type="radio" name="msm" id="msm1" value="metric" checked="checked" onclick=msystem(); />
-				<label for="msm1">KG</label>
+				<label for="msm1">Metric (kg)</label>
 				<input type="radio" name="msm" id="msm2" value="us" onclick=msystem(); />
-				<label for="msm2">LBS</label>
+				<label for="msm2">Imperial (lbs)</label>
 			</td>
 		</tr>
 		<tr>
-			<td>Height<span id=thm>(Cms)</span></td>
-			<td><input id=hm></td>
+			<td>Height<span id="thm">(Cms)</span></td>
+			<td><input id="hm"></td>
 		</tr>
 		<tr>
 			<td>Weight <span id=twm>(Kgs)</span></td>
-			<td><input id=wm></td>
+			<td><input id="wm"></td>
 		</tr>
 		<tr>
 			<td><button type=reset>Reset</button></td>
-			<td><button type=button onclick='bmass();'>Submit</button></td>
+			<td><button id="calc" type=button onclick='bmass();'>Submit</button></td>
 		</tr>
 		<tr>
-			<td>Body Mass Index (BMI)<td><input id=bmi class=op></td>
+			<td>Body Mass Index (BMI) <input id="bmi"></td>
 		</tr>
 		<tr>
-			<td>Normal BMI range<td><input class=op id=nbmi value='18.5-25 kg/m2'></td>
+			<td>You are <b id="youAre"></b></td>
 		</tr>
-		<tr>
-			<td colspan=2 class=ac><br>The calculations are based on WHO recommendations.</td>
-		</tr>
+		
 	</table>
 </form>
 

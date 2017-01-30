@@ -29,6 +29,15 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/assets\/js\/bmi-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/bmi-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/bmi-opt1-min.js": {
 		"ft": 64,
 		"mi": 1,

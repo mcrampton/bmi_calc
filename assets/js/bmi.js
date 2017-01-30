@@ -2,9 +2,11 @@
 
 function valButton(btn) {
 	var cnt = -1;
-	for (var i=btn.length-1; i > -1; i--) {   
+	for (var i=btn.length-1; i > -1; 
+		i--) {   
 		if (btn[i].checked) {
-		cnt = i; i = -1;
+		cnt = i; 
+		i = -1;
 	}
 	}
 		if (cnt > -1) return btn[cnt].value;
@@ -13,14 +15,16 @@ function valButton(btn) {
 	function stripBlanks(fld) {var result = "";
 	var c = 0;for (i=0; i < fld.length; i++) {
 		if (fld.charAt(i) != " " || c > 0) {
-			result += fld.charAt(i);if (fld.charAt(i) != " ") c = result.length;
+			result += fld.charAt(i);
+			if (fld.charAt(i) != " ") c = result.length;
 		}
 	}
 	return result.substr(0,c);
 }
 	
 	function calc(thisform) {
-		var d = valButton(thisform.d);if (d == null) {
+		var d = valButton(thisform.d);
+		if (d == null) {
 			alert("You must choose centimetres/kg or inches/lb");
 			return false;
 		}
@@ -37,7 +41,8 @@ function valButton(btn) {
 }
 	
 	var w = stripBlanks(thisform.w.value);if (w == '') {
-		alert("You must enter your weight");thisform.w.focus();
+		alert("You must enter your weight");
+		thisform.w.focus();
 		return false;
 }
 if (w != Number(w) || (w = Number(w/cv[1])) < 25 || w > 250) {
