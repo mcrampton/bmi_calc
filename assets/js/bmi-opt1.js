@@ -8,25 +8,34 @@ elements.push(element);
 }
 }
 var metrichunit = document.getElementById( 'hi' ),
-	metricwunit = document.getElementById( 'wi' );
-;
+	metricwunit = document.getElementById( 'wi' ),
+	metrichunitsml = document.getElementById( 'thi' );
+	metricwunitsml = document.getElementById( 'twl' );
+	;
+
 window.onload = function() {
 metrichunit.style.display = 'none';
 metricwunit.style.display = 'none';
+metrichunitsml.style.display  = 'none';
+metricwunitsml.style.display  = 'none';
 }
 function msystem() {
 	
 	if (document.getElementById("msm1").checked === true) {
-        $('thm').innerHTML = ' (Cms)';
-        $('twm').innerHTML = ' (Kgs)';
+        $('thm').innerHTML = ' m';
+        $('twm').innerHTML = ' kg';
 		metrichunit.style.display = 'none';
 		metricwunit.style.display = 'none';
+		metrichunitsml.style.display = 'none';
+		metricwunitsml.style.display = 'none';
 	}
 	    else if (document.getElementById("msm2").checked === true) {
-	        $('thm').innerHTML = ' inches';
-	        $('twm').innerHTML = ' lbs';
+	        $('thm').innerHTML = ' ft';
+	        $('twm').innerHTML = ' s';
 			metrichunit.style.display = 'block';
 			metricwunit.style.display = 'block';
+			metrichunitsml.style.display = 'block';
+			metricwunitsml.style.display = 'block';
 	    }
 	}
  	
@@ -41,7 +50,7 @@ var measure= document.querySelector('input[name="msm"]:checked').value,
 	youAre = document.getElementById('youAre');
 	
 if(height===null || height.length===0 || weight===null || weight.length===0 ){
-$('bmi').textContent="Pl. enter data.";
+$('bmi').textContent="Please enter data";
 }else{
 $('bmi').textContent="";
 }
@@ -51,11 +60,12 @@ if((ms==='metric'&&height>0) || (ms==='us'&&height>0)) {
 }
 var heighttotalimperial = height*12 + +heightunit,
 	weighttotalimperial = weight*14 + +weightunit;
+	heightmetric = height*100;
 	//heighttotal = height*100 + +heightunit,
 	
 if(ms==='metric'&&height>0){
 	//$('bmi').textContent=Math.round(weighttotal/(heighttotal*heighttotal/10000)*100)/100 ;  
-	$('bmi').textContent=Math.round(weight/(height*height/10000)*100)/100 ;  
+	$('bmi').textContent=Math.round(weight/(heightmetric*heightmetric/10000)*100)/100 ;  
 }else if(ms==='us'&&height>0){
 	$('bmi').textContent=Math.round(703*weighttotalimperial/(heighttotalimperial*heighttotalimperial)*100)/100;
 }
