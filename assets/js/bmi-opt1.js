@@ -36,27 +36,26 @@ $('bmi').value="Pl. enter data.";
 $('bmi').value="";
 }
 
+      	var you = '';
 
 if(ms==='metric'&&height>0){
-	$('bmi').value=Math.round(weight/(height*height/10000)*100)/100+" kg/m2 " ;
-}else if(ms==='us'&&height>0){
-	$('bmi').value=Math.round(703*weight/(height*height)*100)/100+" lbs/m2 " ;
-}
-
-
-function youAre() {
-  	var you = '';
-if (bmi <= 18.5) {
+	$('bmi').value=Math.round(weight/(height*height/10000)*100)/100 ;
+    
+if ($('bmi').value < 18.5) {
 	you = 'Underweight';
-} else if ((bmi > 18.5) && (bmi <= 24.9)) {
+} else if ($('bmi').value > 18.5 && ($('bmi').value < 24.9)) {
 	you = 'Normal';
-} else if ((bmi > 24.9) && (bmi <= 29.9)) {
+} else if ($('bmi').value > 24.9 && ($('bmi').value < 29.9)) {
 	you = 'Overweight';
 } else {
 	you = 'Obese';
 }
 
-youAre.innerHTML = "you";
+youAre.innerHTML = you;
+    
+}else if(ms==='us'&&height>0){
+	$('bmi').value=Math.round(703*weight/(height*height)*100)/100;
 }
-return;
+
+
 }
