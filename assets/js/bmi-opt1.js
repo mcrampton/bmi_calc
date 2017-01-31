@@ -11,13 +11,13 @@ var metrichunit = document.getElementById( 'hi' ),
 	metricwunit = document.getElementById( 'wi' ),
 	metrichunitsml = document.getElementById( 'thi' );
 	metricwunitsml = document.getElementById( 'twl' );
-	;
 
 window.onload = function() {
 metrichunit.style.display = 'none';
 metricwunit.style.display = 'none';
 metrichunitsml.style.display  = 'none';
 metricwunitsml.style.display  = 'none';
+document.getElementById("msm1").checked = true;
 }
 function msystem() {
 	
@@ -61,10 +61,8 @@ if((ms==='metric'&&height>0) || (ms==='us'&&height>0)) {
 var heighttotalimperial = height*12 + +heightunit,
 	weighttotalimperial = weight*14 + +weightunit;
 	heightmetric = height*100;
-	//heighttotal = height*100 + +heightunit,
 	
 if(ms==='metric'&&height>0){
-	//$('bmi').textContent=Math.round(weighttotal/(heighttotal*heighttotal/10000)*100)/100 ;  
 	$('bmi').textContent=Math.round(weight/(heightmetric*heightmetric/10000)*100)/100 ;  
 }else if(ms==='us'&&height>0){
 	$('bmi').textContent=Math.round(703*weighttotalimperial/(heighttotalimperial*heighttotalimperial)*100)/100;
